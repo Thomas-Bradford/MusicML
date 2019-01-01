@@ -4,13 +4,13 @@
     April 2016
 
     Contains relevant markers for song sections.
-    
+
 """
 
 from songs import Song, SongComparison
 
 #==================================================================================================
-# Songs       
+# Songs
 
 #================================================
 monster_verses = [
@@ -78,7 +78,7 @@ one_verses = [
 ]
 # metal bridge
 one_chorus = [
-    #(278, 320)# 4:33 - 5:20, 
+    #(278, 320)# 4:33 - 5:20,
     (320, 443) #5:20-5:46, 7:23 guitar solo
 ]
 
@@ -103,21 +103,82 @@ remember_chorus = [
     (180, 191)
 ]
 
+
+
 #================================================
 entire_confutatis = [(0, 90)]
 entire_monster = [(0, 173)]
 
+
+
+#Here starts TSB's music.
+#================================================
+shame_verses = [
+    (4, 17),
+    (50,67)
+]
+shame_chorus = [
+    (33, 49),
+    (83, 99)
+]
+#================================================
+day_verses = [
+    (2, 47),
+    (64,95)
+]
+day_chorus = [
+    (48,63 ),
+    (96,110 )
+]
+
+#================================================
+fathertime_verses = [
+    (2,40 ),
+    (59,87)
+]
+fathertime_chorus = [
+    (41, 58),
+    (143,180)
+]
+
+#================================================
+you_verses = [
+    (2,43 ),
+    (61,93)
+]
+you_chorus = [
+    (44, 60),
+    (94,110)
+]
+
+#================================================
+mercy_verses = [
+    (2,96 ),
+    (129,173)
+]
+mercy_chorus = [
+    (97, 128),
+    (228, 268)
+]
+
 #==================================================================================================
 # Complete Song data
 
-monster = Song('Monster', 'input/monster.wav', 
-    verses=monster_verses, 
+#TSB's music starts here.
+shame = Song("Shame", 'input/01_Shame.wav', verses = shame_verses, chorus = shame_chorus)
+day = Song("Day",'input/02_Day.wav', verses = day_verses, chorus = day_chorus)
+fathertime = Song("Father Time",'input/04_FatherTime.wav', verses = fathertime_verses, chorus = fathertime_chorus)
+you = Song("You",'input/05_You.wav', verses = you_verses, chorus = you_chorus)
+mercy = Song("Mercy",'input/06_Mercy.wav', verses = mercy_verses, chorus = mercy_chorus)
+
+monster = Song('Monster', 'input/monster.wav',
+    verses=monster_verses,
     chorus=monster_chorus)
-howyouloveme = Song('How You Love Me', 'input/howyouloveme.wav', 
-    verses=howyouloveme_verses, 
+howyouloveme = Song('How You Love Me', 'input/howyouloveme.wav',
+    verses=howyouloveme_verses,
     chorus=howyouloveme_chorus)
-feelgood = Song('Feel Good Inc.', 'input/feelgood.wav', 
-    verses=feelgood_verses, 
+feelgood = Song('Feel Good Inc.', 'input/feelgood.wav',
+    verses=feelgood_verses,
     chorus=feelgood_chorus)
 confutatis = Song('Confutatis Maledictis', 'input/confutatis.wav',
     verses=confutatis_verses,
