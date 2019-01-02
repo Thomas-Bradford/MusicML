@@ -4,7 +4,7 @@
     April 2016
 
     Analyze music.
-    
+
 """
 
 import numpy as np
@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 # working with data
 from sklearn.preprocessing import StandardScaler
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 
 # machine learning algorithms
 from sklearn.neighbors import KNeighborsClassifier
@@ -46,7 +46,12 @@ class Analyst(object):
         library.pop_v_classical,
         library.pop_v_rock_choruses,
         library.rap_v_classical, #10
-        library.entire_monster_v_confutatis
+        library.entire_monster_v_confutatis,
+        library.shame,
+        library.day,
+        library.fathertime,
+        library.you, #15
+        library.mercy
     ]
 
     algo_classes = [
@@ -57,7 +62,7 @@ class Analyst(object):
         #SVC(kernel="rbf", C=10), # increase C to decrease regularization
         #SVC(kernel="rbf", C=100), # increase C to decrease regularization
         # DecisionTreeClassifier(),
-        # RandomForestClassifier(), 
+        # RandomForestClassifier(),
         # AdaBoostClassifier(),
         # GaussianNB(),
     ]
@@ -68,10 +73,10 @@ class Analyst(object):
     #==================================================================================================
 
     @staticmethod
-    def primary_function(   song_index, algo, n_art_graphs=1, n_test_runs=100, is_plot_data=False, 
+    def primary_function(   song_index, algo, n_art_graphs=1, n_test_runs=100, is_plot_data=False,
                             is_graph=False, is_cluster=False, is_elbow=False):
         """ """
-        
+
         song = Analyst.song_library[song_index]
 
         print "\n======================================================"
@@ -85,12 +90,12 @@ class Analyst(object):
             print "\n--Begin test with duration", frame_duration
             print "Create frames and extract features..."
             verses_features, chorus_features = song.get_features(frame_duration)
-            
+
             if is_plot_data:
                 print "Plotting training/test data..."
                 scatterplot(verses_features, chorus_features)
 
-            result = Analyst.run_test(song.name, algo, verses_features, chorus_features, 
+            result = Analyst.run_test(song.name, algo, verses_features, chorus_features,
                 n_art_graphs, n_test_runs, is_plot_data, is_graph, is_cluster, is_elbow)
             avg_results[frame_duration] = result
         print avg_results
