@@ -51,7 +51,8 @@ class Analyst(object):
         library.day,
         library.fathertime,
         library.you, #15
-        library.mercy
+        library.mercy,
+        library.conformity
     ]
 
     algo_classes = [

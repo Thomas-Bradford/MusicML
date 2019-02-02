@@ -161,16 +161,40 @@ mercy_chorus = [
     (228, 268)
 ]
 
+#================================================
+conformity_verses = [
+    (3 ,32),
+    (58 ,82)
+]
+conformity_chorus = [
+    (33 ,53 ),
+    (128, 168)
+]
+
 #==================================================================================================
 # Complete Song data
 
 #TSB's music starts here.
-shame = Song("Shame", 'input/01_Shame.wav', verses = shame_verses, chorus = shame_chorus)
-day = Song("Day",'input/02_Day.wav', verses = day_verses, chorus = day_chorus)
-fathertime = Song("Father Time",'input/04_FatherTime.wav', verses = fathertime_verses, chorus = fathertime_chorus)
-you = Song("You",'input/05_You.wav', verses = you_verses, chorus = you_chorus)
-mercy = Song("Mercy",'input/06_Mercy.wav', verses = mercy_verses, chorus = mercy_chorus)
+shame = Song("Shame", 'input/01_Shame.wav',
+    verses = shame_verses,
+    chorus = shame_chorus)
+day = Song("Day",'input/02_Day.wav',
+    verses = day_verses,
+    chorus = day_chorus)
+fathertime = Song("Father Time",'input/04_FatherTime.wav',
+    verses = fathertime_verses,
+    chorus = fathertime_chorus)
+you = Song("You",'input/05_You.wav',
+    verses = you_verses,
+    chorus = you_chorus)
+mercy = Song("Mercy",'input/06_Mercy.wav',
+    verses = mercy_verses,
+    chorus = mercy_chorus)
+conformity = Song("conformity",'input/07_conformity.wav',
+    verses = conformity_verses,
+    chorus = conformity_chorus)
 
+#NSB's music starts here.
 monster = Song('Monster', 'input/monster.wav',
     verses=monster_verses,
     chorus=monster_chorus)
